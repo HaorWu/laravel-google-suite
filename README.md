@@ -18,12 +18,12 @@ $account->save();
 $accounts = Event::get();
 
 // update existing account
-$firsAccount = $events->first();
-$firsAccount->name = 'updated name';
-$firsAccount->save();
+$firstAccount = $accounts->first();
+$firstAccount->name = 'updated name';
+$firstAccount->save();
 
 // set password account
-$firsAccount->update(['password' => 'password']);
+$firstAccount->update(['password' => 'password']);
 
 // create a new account
 Account::create([
