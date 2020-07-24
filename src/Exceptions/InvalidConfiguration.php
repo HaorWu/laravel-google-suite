@@ -1,12 +1,17 @@
 <?php
 
-namespace Spatie\GoogleCalendar\Exceptions;
+namespace oeleco\GoogleSuite\Exceptions;
 
 use Exception;
 
 class InvalidConfiguration extends Exception
 {
-    public static function calendarIdNotSpecified()
+    public static function hostedDomainNotSpecified()
+    {
+        return new static('There was no calendar id specified. You must provide a valid calendar id to fetch events for.');
+    }
+
+    public static function serviceAccountNotSpecified()
     {
         return new static('There was no calendar id specified. You must provide a valid calendar id to fetch events for.');
     }
