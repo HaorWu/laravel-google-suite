@@ -1,16 +1,16 @@
 <?php
 
-namespace Spatie\GoogleCalendar\Tests\Integration;
+namespace oeleco\GoogleSuite\Tests\Integration;
 
-use Carbon\Carbon;
 use DateTime;
 use Mockery as m;
-use Spatie\GoogleCalendar\Event;
-use Spatie\GoogleCalendar\Tests\TestCase;
+use Carbon\Carbon;
+use oeleco\GoogleSuite\Calendar\Event;
+use oeleco\GoogleSuite\Tests\TestCase;
 
 class EventTest extends TestCase
 {
-    /** @var \Spatie\GoogleCalendar\Event */
+    /** @var \oeleco\GoogleSuite\Calendar\Event */
     protected $event;
 
     public function setUp(): void
@@ -127,8 +127,8 @@ class EventTest extends TestCase
     public function it_can_create_an_event_based_on_a_text_string_statically()
     {
         $event = m::mock(Event::class);
-        $event->shouldReceive('quickCreate')->once()->with('Appointment at Somewhere on April 25 10am-10:25am');
+        $event->shouldReceive('quickCreate')->once()->with('primary', 'Appointment at Somewhere on April 25 10am-10:25am');
 
-        $event::quickCreate('Appointment at Somewhere on April 25 10am-10:25am');
+        $event::quickCreate('primary', 'Appointment at Somewhere on April 25 10am-10:25am');
     }
 }

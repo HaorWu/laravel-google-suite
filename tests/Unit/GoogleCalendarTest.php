@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\GoogleCalendar\Tests\Unit;
+namespace oeleco\GoogleSuite\Tests\Unit;
 
-use Google_Service_Calendar;
 use Mockery;
+use Google_Service_Calendar;
 use PHPUnit\Framework\TestCase;
-use Spatie\GoogleCalendar\GoogleCalendar;
+use oeleco\GoogleSuite\Calendar\GoogleCalendar;
 
 class GoogleCalendarTest extends TestCase
 {
@@ -24,7 +24,7 @@ class GoogleCalendarTest extends TestCase
 
         $this->googleServiceCalendar = Mockery::mock(Google_Service_Calendar::class);
 
-        $this->calendarId = 'abc123';
+        $this->calendarId = 'primary';
 
         $this->googleCalendar = new GoogleCalendar($this->googleServiceCalendar, $this->calendarId);
     }
