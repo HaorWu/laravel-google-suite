@@ -1,21 +1,18 @@
 {
-    "name": "spatie/laravel-google-calendar",
-    "description": "Manage events on a Google Calendar",
+    "name": "oeleco/laravel-google-suite",
+    "description": "Manage services of Google Suite",
     "keywords": [
-        "spatie",
-        "calendar",
         "google",
-        "event",
-        "schedule",
-        "laravel-google-calendar"
+        "gsuite",
+        "admin sdk",
+        "laravel-google-suite"
     ],
-    "homepage": "https://github.com/spatie/laravel-google-calendar",
+    "homepage": "https://github.com/oeleco/laravel-google-suite",
     "license": "MIT",
     "authors": [
         {
-            "name": "Freek Van der Herten",
-            "email": "freek@spatie.be",
-            "homepage": "https://spatie.be",
+            "name": "Osmell Caicedo",
+            "email": "correo.oele@gmail.com",
             "role": "Developer"
         }
     ],
@@ -32,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\GoogleCalendar\\": "src"
+            "oeleco\\GoogleSuite\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\GoogleCalendar\\Tests\\": "tests"
+            "oeleco\\GoogleSuite\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -46,10 +43,11 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\GoogleCalendar\\GoogleCalendarServiceProvider"
+                "oeleco\\GoogleSuite\\GoogleSuiteServiceProvider"
             ],
             "aliases": {
-                "GoogleCalendar": "Spatie\\GoogleCalendar\\GoogleCalendarFacade"
+                "GoogleAccount": "oeleco\\GoogleSuite\\Directory\\Account\\GoogleAccountFacade",
+                "GoogleCalendar": "oeleco\\GoogleSuite\\Calendar\\GoogleCalendarFacade"
             }
         }
     },
