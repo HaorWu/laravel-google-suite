@@ -1,12 +1,14 @@
 <?php
 
-namespace Spatie\GoogleCalendar;
+namespace oeleco\GoogleSuite\Calendar;
 
+use DateTime;
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
-use DateTime;
+
 use Google_Service_Calendar_Event;
 use Google_Service_Calendar_EventDateTime;
+
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
@@ -34,7 +36,7 @@ class Event
      *
      * @return static
      */
-    public static function createFromGoogleCalendarEvent(Google_Service_Calendar_Event $googleEvent, $calendarId)
+    public static function createFromGoogleCalendarEvent(Google_Service_Calendar_Event $googleEvent, string $calendarId)
     {
         $event = new static;
 
@@ -50,7 +52,7 @@ class Event
      *
      * @return mixed
      */
-    public static function create(array $properties, string $calendarId = null, $optParams = [])
+    public static function create(string $calendarId, array $properties, $optParams = [])
     {
         $event = new static;
 
@@ -63,16 +65,16 @@ class Event
         return $event->save('insertEvent', $optParams);
     }
 
-    public static function quickCreate(string $text)
+    public static function quickCreate(string $calendarId, string $text)
     {
         $event = new static;
 
-        $event->calendarId = static::getGoogleCalendar()->getCalendarId();
+        $event->calendarId = static::getGoogleCalendar($calendarId)->getCalendarId();
 
         return $event->quickSave($text);
     }
 
-    public static function get(CarbonInterface $startDateTime = null, CarbonInterface $endDateTime = null, array $queryParameters = [], string $calendarId = null): Collection
+    public static function get(string $calendarId, CarbonInterface $startDateTime = null, CarbonInterface $endDateTime = null, array $queryParameters = []): Collection
     {
         $googleCalendar = static::getGoogleCalendar($calendarId);
 
@@ -104,7 +106,7 @@ class Event
             ->values();
     }
 
-    public static function find($eventId, string $calendarId = null): self
+    public static function find(string $calendarId, $eventId): self
     {
         $googleCalendar = static::getGoogleCalendar($calendarId);
 
@@ -216,11 +218,9 @@ class Event
         return $this->calendarId;
     }
 
-    protected static function getGoogleCalendar(string $calendarId = null): GoogleCalendar
+    protected static function getGoogleCalendar(string $calendarId): GoogleCalendar
     {
-        $calendarId = $calendarId ?? config('google-calendar.calendar_id');
-
-        return GoogleCalendarFactory::createForCalendarId($calendarId);
+        return GoogleCalendarFactory::make($calendarId);
     }
 
     protected function setDateProperty(string $name, CarbonInterface $date)

@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\GoogleCalendar;
+namespace oeleco\GoogleSuite\Calendar;
 
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
@@ -17,7 +17,7 @@ class GoogleCalendar
     /** @var string */
     protected $calendarId;
 
-    public function __construct(Google_Service_Calendar $calendarService, string $calendarId)
+    public function __construct(Google_Service_Calendar $calendarService, string $calendarId = null)
     {
         $this->calendarService = $calendarService;
 
