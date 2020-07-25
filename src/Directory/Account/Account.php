@@ -27,11 +27,11 @@ class Account
      */
     public static function createFromGoogleAccount(Google_Service_Directory_User $googleAccount)
     {
-        $event = new static;
+        $account = new static;
 
-        $event->googleAccount = $googleAccount;
+        $account->googleAccount = $googleAccount;
 
-        return $event;
+        return $account;
     }
 
     /**
@@ -41,13 +41,13 @@ class Account
      */
     public static function create(array $properties, $optParams = [])
     {
-        $event = new static;
+        $account = new static;
 
         foreach ($properties as $name => $value) {
-            $event->$name = $value;
+            $account->$name = $value;
         }
 
-        return $event->save('insertAccount', $optParams);
+        return $account->save('insertAccount', $optParams);
     }
 
 
@@ -73,12 +73,12 @@ class Account
             ->map(function (Google_Service_Directory_User $account) {
                 return static::createFromGoogleAccount($account);
             })
-            ->sortBy(function (self $event, $index) use ($useUserOrder) {
+            ->sortBy(function (self $account, $index) use ($useUserOrder) {
                 if ($useUserOrder) {
                     return $index;
                 }
 
-                return $event->sortDate;
+                return $account->sortDate;
             })
             ->values();
     }
