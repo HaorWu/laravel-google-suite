@@ -41,7 +41,7 @@ class GoogleAccount implements GoogleDirectory
     }
 
     /*
-     https://developers.google.com/admin-sdk/directory/v1/reference/orgunits/insert
+     https://developers.google.com/admin-sdk/directory/v1/reference/users/insert
      */
     public function insertAccount($account, $optParams = []): Google_Service_Directory_User
     {
