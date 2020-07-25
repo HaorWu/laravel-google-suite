@@ -30,6 +30,6 @@ class GoogleOrgunitFactory extends GoogleSuiteFactory
 
     protected static function createDirectoryClient(Google_Service_Directory $service, string $customerId = null) : GoogleDirectory
     {
-        return new GoogleOrgUnit($service, $customerId);
+        return new GoogleOrgunit($service, $customerId);
     }
 }
