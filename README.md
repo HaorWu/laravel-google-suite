@@ -3,7 +3,7 @@
 This package makes working with a Google Suite a breeze. Once it has been set up you can do these things:
 
 ```php
-use oeleco\GoogleSuite\Directory\Account\Account;
+use oeleco\GoogleSuite\Directory\Account;
 
 //create a new account
 $account = new Account;
