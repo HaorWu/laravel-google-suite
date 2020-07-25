@@ -1,6 +1,6 @@
 <?php
 
-namespace oeleco\GoogleSuite\Directory\Account;
+namespace oeleco\GoogleSuite\Directory;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -8,6 +8,8 @@ use Illuminate\Support\Str;
 use Google_Service_Directory_User;
 use Illuminate\Support\Collection;
 use Google_Service_Directory_UserName;
+
+use oeleco\GoogleSuite\Directory\Account\GoogleAccount;
 use oeleco\GoogleSuite\Directory\Account\GoogleAccountFactory;
 
 class Account

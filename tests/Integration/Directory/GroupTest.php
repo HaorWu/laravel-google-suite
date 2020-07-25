@@ -4,11 +4,11 @@ namespace oeleco\GoogleSuite\Tests\Integration\Directory;
 use Mockery as m;
 
 use oeleco\GoogleSuite\Tests\TestCase;
-use oeleco\GoogleSuite\Directory\Group\Group;
+use oeleco\GoogleSuite\Directory\Group;
 
 class GroupTest extends TestCase
 {
-    /** @var \oeleco\GoogleSuite\Directory\Group\Group */
+    /** @var \oeleco\GoogleSuite\Directory\Group */
     protected $group;
 
     public function setUp(): void

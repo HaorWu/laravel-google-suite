@@ -4,11 +4,11 @@ namespace oeleco\GoogleSuite\Tests\Integration\Directory;
 use Mockery as m;
 
 use oeleco\GoogleSuite\Tests\TestCase;
-use oeleco\GoogleSuite\Directory\Orgunit\Orgunit;
+use oeleco\GoogleSuite\Directory\Orgunit;
 
 class OrgunitTest extends TestCase
 {
-    /** @var \oeleco\GoogleSuite\Directory\OrgUnit\Orgunit */
+    /** @var \oeleco\GoogleSuite\Directory\Orgunit */
     protected $orgunit;
 
     public function setUp(): void

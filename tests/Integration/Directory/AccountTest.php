@@ -4,11 +4,11 @@ namespace oeleco\GoogleSuite\Tests\Integration\Directory;
 use Mockery as m;
 
 use oeleco\GoogleSuite\Tests\TestCase;
-use oeleco\GoogleSuite\Directory\Account\Account;
+use oeleco\GoogleSuite\Directory\Account;
 
 class AccountTest extends TestCase
 {
-    /** @var \oeleco\GoogleSuite\Directory\Account\Account */
+    /** @var \oeleco\GoogleSuite\Directory\Account */
     protected $account;
 
     public function setUp(): void

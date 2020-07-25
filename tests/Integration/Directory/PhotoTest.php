@@ -5,12 +5,12 @@ namespace oeleco\GoogleSuite\Tests\Integration\Directory;
 use Mockery as m;
 
 use oeleco\GoogleSuite\Tests\TestCase;
-use oeleco\GoogleSuite\Directory\Photo\Photo;
-use oeleco\GoogleSuite\Directory\Account\Account;
+use oeleco\GoogleSuite\Directory\Photo;
+use oeleco\GoogleSuite\Directory\Account;
 
 class PhotoTest extends TestCase
 {
-    /** @var \oeleco\GoogleSuite\Directory\Photo\Photo */
+    /** @var \oeleco\GoogleSuite\Directory\Photo */
     protected $photo;
 
     public function setUp(): void

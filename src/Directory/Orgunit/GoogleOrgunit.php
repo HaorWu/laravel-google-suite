@@ -6,6 +6,7 @@ use Google_Service_Directory;
 use Google_Service_Directory_OrgUnit;
 use Google_Service_Directory_OrgUnits;
 
+use oeleco\GoogleSuite\Directory\Orgunit;
 use oeleco\GoogleSuite\Contracts\GoogleDirectory;
 
 class GoogleOrgunit implements GoogleDirectory

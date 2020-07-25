@@ -5,6 +5,7 @@ namespace oeleco\GoogleSuite\Directory\Photo;
 use Google_Service_Directory;
 use Google_Service_Directory_UserPhoto;
 
+use oeleco\GoogleSuite\Directory\Photo;
 use oeleco\GoogleSuite\Contracts\GoogleDirectory;
 
 class GooglePhoto implements GoogleDirectory

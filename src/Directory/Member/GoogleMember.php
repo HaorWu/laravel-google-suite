@@ -6,6 +6,7 @@ use Google_Service_Directory;
 use Google_Service_Directory_Member;
 use Google_Service_Directory_Members;
 
+use oeleco\GoogleSuite\Directory\Member;
 use oeleco\GoogleSuite\Contracts\GoogleDirectory;
 
 class GoogleMember implements GoogleDirectory

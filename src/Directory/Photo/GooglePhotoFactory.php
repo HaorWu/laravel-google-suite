@@ -3,9 +3,9 @@
 namespace oeleco\GoogleSuite\Directory\Photo;
 
 use Google_Service_Directory;
+use oeleco\GoogleSuite\GoogleSuiteFactory;
 use oeleco\GoogleSuite\Contracts\GoogleDirectory;
 use oeleco\GoogleSuite\Directory\GoogleDirectoryFactory;
-use oeleco\GoogleSuite\GoogleSuiteFactory;
 
 class GooglePhotoFactory extends GoogleSuiteFactory
 {

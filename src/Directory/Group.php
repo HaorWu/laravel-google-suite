@@ -1,11 +1,14 @@
 <?php
 
-namespace oeleco\GoogleSuite\Directory\Group;
+namespace oeleco\GoogleSuite\Directory;
 
 use Illuminate\Support\Arr;
 
 use Illuminate\Support\Collection;
 use Google_Service_Directory_Group;
+
+use oeleco\GoogleSuite\Directory\Group\GoogleGroup;
+use oeleco\GoogleSuite\Directory\Group\GoogleGroupFactory;
 
 class Group
 {

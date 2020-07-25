@@ -1,13 +1,14 @@
 <?php
+namespace oeleco\GoogleSuite\Calendar\Event;
 
-namespace oeleco\GoogleSuite\Calendar;
 
+use DateTime;
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
-use DateTime;
 use Google_Service_Calendar;
 use Google_Service_Calendar_Event;
 use Google_Service_Calendar_Events;
+use oeleco\GoogleSuite\Calendar\Event;
 
 class GoogleCalendar
 {

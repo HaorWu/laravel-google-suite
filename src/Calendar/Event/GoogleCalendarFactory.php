@@ -1,6 +1,6 @@
 <?php
+namespace oeleco\GoogleSuite\Calendar\Event;
 
-namespace oeleco\GoogleSuite\Calendar;
 
 use Google_Service_Calendar;
 use oeleco\GoogleSuite\GoogleSuiteFactory;

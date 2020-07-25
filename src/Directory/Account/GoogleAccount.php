@@ -6,6 +6,7 @@ use Google_Service_Directory;
 use Google_Service_Directory_User;
 use Google_Service_Directory_Users;
 
+use oeleco\GoogleSuite\Directory\Account;
 use oeleco\GoogleSuite\Contracts\GoogleDirectory;
 
 class GoogleAccount implements GoogleDirectory

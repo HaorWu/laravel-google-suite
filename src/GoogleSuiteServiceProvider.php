@@ -102,14 +102,14 @@ class GoogleSuiteServiceProvider extends ServiceProvider
 
     protected function registerGoogleCalendar()
     {
-        $this->app->bind(\oeleco\GoogleSuite\Calendar\GoogleCalendar::class, function () {
+        $this->app->bind(\oeleco\GoogleSuite\Calendar\Event\GoogleCalendar::class, function () {
             $config = config('google-suite');
 
             $this->guardAgainstInvalidConfiguration($config);
 
-            return \oeleco\GoogleSuite\Calendar\GoogleCalendarFactory::make();
+            return \oeleco\GoogleSuite\Calendar\Event\GoogleCalendarFactory::make();
         });
 
-        $this->app->alias(\oeleco\GoogleSuite\Calendar\GoogleCalendar::class, 'laravel-google-calendar');
+        $this->app->alias(\oeleco\GoogleSuite\Calendar\Event\GoogleCalendar::class, 'laravel-google-calendar');
     }
 }

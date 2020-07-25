@@ -1,14 +1,13 @@
 <?php
 
-namespace oeleco\GoogleSuite\Directory\Orgunit;
+namespace oeleco\GoogleSuite\Directory;
 
 use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
+use Illuminate\Support\Collection;
 
 use Google_Service_Directory_Orgunit;
-use Google_Service_Directory_OrgunitName;
 
-use Illuminate\Support\Collection;
+use oeleco\GoogleSuite\Directory\Orgunit\GoogleOrgunit;
 use oeleco\GoogleSuite\Directory\Orgunit\GoogleOrgunitFactory;
 
 class Orgunit

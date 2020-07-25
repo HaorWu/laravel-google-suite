@@ -5,14 +5,14 @@ namespace oeleco\GoogleSuite\Tests\Integration\Directory;
 use Mockery as m;
 
 use oeleco\GoogleSuite\Tests\TestCase;
-use oeleco\GoogleSuite\Directory\Group\Group;
-use oeleco\GoogleSuite\Directory\Member\Member;
-use oeleco\GoogleSuite\Directory\Account\Account;
+use oeleco\GoogleSuite\Directory\Group;
+use oeleco\GoogleSuite\Directory\Member;
+use oeleco\GoogleSuite\Directory\Account;
 
 class MemberTest extends TestCase
 {
 
-    /** @var \oeleco\GoogleSuite\Directory\Member\Member */
+    /** @var \oeleco\GoogleSuite\Directory\Member */
     protected $group;
 
     public function setUp(): void

@@ -1,12 +1,13 @@
 <?php
 
-namespace oeleco\GoogleSuite\Directory\Member;
+namespace oeleco\GoogleSuite\Directory;
 
 use Illuminate\Support\Arr;
 
+use Illuminate\Support\Collection;
 use Google_Service_Directory_Member;
 
-use Illuminate\Support\Collection;
+use oeleco\GoogleSuite\Directory\Member\GoogleMember;
 use oeleco\GoogleSuite\Directory\Member\GoogleMemberFactory;
 
 class Member

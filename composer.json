@@ -51,7 +51,6 @@
                 "GoogleGroup"   : "oeleco\\GoogleSuite\\Directory\\Group\\GoogleGroupFacade",
                 "GoogleMember"  : "oeleco\\GoogleSuite\\Directory\\Member\\GoogleMemberFacade",
                 "GooglePhoto"   : "oeleco\\GoogleSuite\\Directory\\Photo\\GooglePhotoFacade",
-                "GoogleCalendar": "oeleco\\GoogleSuite\\Calendar\\GoogleCalendarFacade"
             }
         }
     },

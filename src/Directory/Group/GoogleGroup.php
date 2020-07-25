@@ -6,6 +6,7 @@ use Google_Service_Directory;
 use Google_Service_Directory_Group;
 use Google_Service_Directory_Groups;
 
+use oeleco\GoogleSuite\Directory\Group;
 use oeleco\GoogleSuite\Contracts\GoogleDirectory;
 
 class GoogleGroup implements GoogleDirectory

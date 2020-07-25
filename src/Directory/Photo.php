@@ -1,12 +1,11 @@
 <?php
 
-namespace oeleco\GoogleSuite\Directory\Photo;
+namespace oeleco\GoogleSuite\Directory;
 
 use Illuminate\Support\Arr;
-
 use Google_Service_Directory_UserPhoto;
 
-use Illuminate\Support\Collection;
+use oeleco\GoogleSuite\Directory\Photo\GooglePhoto;
 use oeleco\GoogleSuite\Directory\Photo\GooglePhotoFactory;
 
 class Photo

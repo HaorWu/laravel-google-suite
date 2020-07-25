@@ -6,12 +6,14 @@ use DateTime;
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
 
-use Google_Service_Calendar_Event;
-use Google_Service_Calendar_EventDateTime;
-
 use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+
+use Google_Service_Calendar_Event;
+use Illuminate\Support\Collection;
+use Google_Service_Calendar_EventDateTime;
+use oeleco\GoogleSuite\Calendar\Event\GoogleCalendar;
+use oeleco\GoogleSuite\Calendar\Event\GoogleCalendarFactory;
 
 class Event
 {
