@@ -1,5 +1,5 @@
 <?php
-namespace oeleco\GoogleSuite\Tests\Integration;
+namespace oeleco\GoogleSuite\Tests\Integration\Directory;
 
 use DateTime;
 use Mockery as m;
