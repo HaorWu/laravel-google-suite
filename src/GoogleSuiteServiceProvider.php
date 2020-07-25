@@ -20,6 +20,7 @@ class GoogleSuiteServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/google-suite.php', 'google-suite');
 
         $this->registerGoogleAccountClass();
+        $this->registerGoogleOrgunitClass();
         $this->registerGoogleCalendarClass();
     }
 
@@ -44,7 +45,7 @@ class GoogleSuiteServiceProvider extends ServiceProvider
         }
     }
 
-    public function registerGoogleAccountClass()
+    protected function registerGoogleAccountClass()
     {
         $this->app->bind(\oeleco\GoogleSuite\Directory\Account\GoogleAccount::class, function () {
             $config = config('google-suite');
@@ -55,6 +56,19 @@ class GoogleSuiteServiceProvider extends ServiceProvider
         });
 
         $this->app->alias(\oeleco\GoogleSuite\Directory\Account\GoogleAccount::class, 'laravel-google-account');
+    }
+
+    protected function registerGoogleOrgunitClass()
+    {
+        $this->app->bind(\oeleco\GoogleSuite\Directory\OrgUnit\GoogleOrgunit::class, function () {
+            $config = config('google-suite');
+
+            $this->guardAgainstInvalidConfiguration($config);
+
+            return \oeleco\GoogleSuite\Directory\OrgUnit\GoogleOrgunitFactory::make("my_customer");
+        });
+
+        $this->app->alias(\oeleco\GoogleSuite\Directory\OrgUnit\GoogleOrgunit::class, 'laravel-google-orgunit');
     }
 
     protected function registerGoogleCalendarClass()
