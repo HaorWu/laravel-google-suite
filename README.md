@@ -15,11 +15,11 @@ $account->email     = 'john.doe@domainwithgsuite.com';
 $account->save();
 
 // get all account for hosted domain
-$accounts = Event::get();
+$accounts = Account::get();
 
 // update existing account
 $firstAccount = $accounts->first();
-$firstAccount->name = 'updated name';
+$firstAccount->firstName = 'updated name';
 $firstAccount->save();
 
 // set password account
@@ -29,7 +29,8 @@ $firstAccount->update(['password' => 'password']);
 Account::create([
    'firstName' => 'Pepito',
    'lastName'  => 'Perez',
-   'email'     => 'pepito.perez@domainwithgsuite.com'
+   'email'     => 'pepito.perez@domainwithgsuite.com',
+   'password'  => 'password'
 ]);
 
 // delete an account
