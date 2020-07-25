@@ -36,6 +36,11 @@ Account::create([
 // delete an account
 $account->delete();
 ```
+Please see [API](API.md) for more information about what you can do with this package.
+
+## Disclaimer
+
+**_This package is under active development, use at your own risk. A version will be tagged when ready._**
 
 ## Installation
 
