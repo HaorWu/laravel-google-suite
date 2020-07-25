@@ -46,7 +46,11 @@
                 "oeleco\\GoogleSuite\\GoogleSuiteServiceProvider"
             ],
             "aliases": {
-                "GoogleAccount": "oeleco\\GoogleSuite\\Directory\\Account\\GoogleAccountFacade",
+                "GoogleAccount" : "oeleco\\GoogleSuite\\Directory\\Account\\GoogleAccountFacade",
+                "GoogleOrgunit" : "oeleco\\GoogleSuite\\Directory\\Orgunit\\GoogleOrgunitFacade",
+                "GoogleGroup"   : "oeleco\\GoogleSuite\\Directory\\Group\\GoogleGroupFacade",
+                "GoogleMember"  : "oeleco\\GoogleSuite\\Directory\\Member\\GoogleMemberFacade",
+                "GooglePhoto"   : "oeleco\\GoogleSuite\\Directory\\Photo\\GooglePhotoFacade",
                 "GoogleCalendar": "oeleco\\GoogleSuite\\Calendar\\GoogleCalendarFacade"
             }
         }
