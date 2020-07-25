@@ -20,7 +20,7 @@ class GoogleSuiteServiceProvider extends ServiceProvider
 
         $this->registerGoogleAccountClass();
         $this->registerGoogleOrgunitClass();
-        $this->registerGoogleGroupClass()
+        $this->registerGoogleGroupClass();
 
         // $this->registerGoogleCalendarClass();
     }
