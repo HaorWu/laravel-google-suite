@@ -26,7 +26,7 @@ class GoogleCalendarTest extends TestCase
 
         $this->calendarId = 'primary';
 
-        $this->googleCalendar = new GoogleCalendar($this->googleServiceCalendar, $this->calendarId);
+        $this->googleCalendar = new GoogleCalendar($this->googleServiceCalendar);
     }
 
     /** @test */
