@@ -1,7 +1,6 @@
 <?php
 namespace oeleco\GoogleSuite\Calendar\Event;
 
-
 use DateTime;
 use Carbon\Carbon;
 use Carbon\CarbonInterface;

@@ -1,7 +1,6 @@
 <?php
 namespace oeleco\GoogleSuite\Calendar\Event;
 
-
 use Google_Service_Calendar;
 use oeleco\GoogleSuite\GoogleSuiteFactory;
 
@@ -21,7 +20,8 @@ class GoogleCalendarFactory extends GoogleSuiteFactory
     public static function getSpecifiedScopes() :array
     {
         return [
-            Google_Service_Calendar::CALENDAR
+            Google_Service_Calendar::CALENDAR,
+            Google_Service_Calendar::CALENDAR_EVENTS
         ];
     }
 

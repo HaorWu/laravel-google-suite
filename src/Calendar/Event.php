@@ -148,6 +148,12 @@ class Event
             return;
         }
 
+        if (in_array($name, ['conferenceData.createRequest.requestId'])) {
+            $this->setConferenceProperty($name, $value);
+
+            return;
+        }
+
         Arr::set($this->googleEvent, $name, $value);
     }
 
@@ -248,6 +254,19 @@ class Event
         }
     }
 
+    protected function setConferenceProperty(string $name, string $value)
+    {
+        $data = new \Google_Service_Calendar_ConferenceData;
+
+        if (in_array($name, ['conferenceData.createRequest.requestId'])) {
+            $request = new \Google_Service_Calendar_CreateConferenceRequest;
+            $request->requestId = $value;
+        }
+
+        $data->setCreateRequest($request);
+        $this->googleEvent->setConferenceData($data);
+    }
+
     protected function getFieldName(string $name): string
     {
         return [
@@ -257,6 +276,7 @@ class Event
             'endDate' => 'end.date',
             'startDateTime' => 'start.dateTime',
             'endDateTime' => 'end.dateTime',
+            'conferenceRequestId' => 'conferenceData.createRequest.requestId',
         ][$name] ?? $name;
     }
 }
