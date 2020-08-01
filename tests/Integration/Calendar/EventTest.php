@@ -131,4 +131,20 @@ class EventTest extends TestCase
 
         $event::quickCreate('primary', 'Appointment at Somewhere on April 25 10am-10:25am');
     }
+
+    /** @test */
+    public function it_can_create_a_event_for_impersonate_account()
+    {
+        $event = Event::create(
+            'primary',
+            [
+                'name'           => "testevent",
+                'description'    => "test description",
+                'startDateTime'  => now(),
+                'endDateTime'    => now()->addHour(),
+            ]
+        );
+
+        $this->assertTrue($event->id != null);
+    }
 }
