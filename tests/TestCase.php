@@ -24,8 +24,8 @@ abstract class TestCase extends OrchestraTestCase
 
     protected function getEnvironmentSetUp($app)
     {
-        $app['config']->set('google-suite.hosted_domain', $this->hosted_domain = 'rugrats.edu.co');
-        $app['config']->set('google-suite.service_account', 'ovy@rugrats.edu.co');
+        $app['config']->set('google-suite.hosted_domain', $this->hosted_domain = 'hosteddomain.com');
+        $app['config']->set('google-suite.service_account', 'domaindelegationemail@hosteddomain.com');
         $app['config']->set('google-suite.credentials', './credentials.json');
     }
 }
