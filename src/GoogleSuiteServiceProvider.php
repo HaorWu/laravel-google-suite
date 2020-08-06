@@ -5,7 +5,6 @@ namespace oeleco\GoogleSuite;
 use Illuminate\Support\ServiceProvider;
 use oeleco\GoogleSuite\Exceptions\InvalidConfiguration;
 
-
 class GoogleSuiteServiceProvider extends ServiceProvider
 {
     public function boot()
@@ -23,8 +22,8 @@ class GoogleSuiteServiceProvider extends ServiceProvider
         $this->registerGoogleOrgunit();
         $this->registerGoogleGroup();
         $this->registerGooglePhoto();
-
-        // $this->registerGoogleCalendar();
+        $this->registerGoogleCalendar();
+        $this->registerGoogleGroupsettings();
     }
 
     protected function guardAgainstInvalidConfiguration(array $config = null)
@@ -111,5 +110,18 @@ class GoogleSuiteServiceProvider extends ServiceProvider
         });
 
         $this->app->alias(\oeleco\GoogleSuite\Calendar\Event\GoogleCalendar::class, 'laravel-google-calendar');
+    }
+
+    protected function registerGoogleGroupsettings()
+    {
+        $this->app->bind(\oeleco\GoogleSuite\Groupsettings\Setting\GoogleGroupsettings::class, function () {
+            $config = config('google-suite');
+
+            $this->guardAgainstInvalidConfiguration($config);
+
+            return \oeleco\GoogleSuite\Groupsettings\Setting\GoogleGroupsettingsFactory::make();
+        });
+
+        $this->app->alias(\oeleco\GoogleSuite\Groupsettings\Setting\GoogleGroupsettings::class, 'laravel-google-group-settings');
     }
 }
